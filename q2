@@ -1,14 +1,60 @@
 2222222222222
 
 A.  Explain what recursion is and when it is useful.
+
+The idea of calling one function from another immediately suggests the possibility of a function calling itself. 
+The function-call mechanism in Java supports this possibility,
+which is known as recursion. Recursion is a powerful general-purpose programming technique, 
+and is the key to numerous critically important computational applications,
+ranging from combinatorial search and sorting methods methods that provide basic support for information processing
+to the Fast Fourier Transform for signal processing .
+
     Explain what the |termination step| and |recursion step| are in a recursive method.
+    Termination step is make stop from a recursive method.Recursion step is start in a recursive method.
+    
 
 B.  Describe the difference between a Queue and a Stack.
 
+A stack is a container of objects that are inserted and removed according to the last-in first-out principle. 
+In the pushdown stacks only two operations are allowed:
+push the item into the stack, and pop the item out of the stack.
+A stack is a limited access data structure - elements can be added and removed from the stack only at the top. 
+push adds an item to the top of the stack, pop removes the item from the top. A helpful analogy is to think of a stack of books;
+you can remove only the top book
+, also you can add a new book on the top.
+
+A queue is a container of objects that are inserted and removed according to the first-in first-out principle. 
+An excellent example of a queue is a line of students in the food court of the UC.
+New additions to a line made to the back of the queue,
+while removal (or serving) happens in the front. 
+In the queue only two operations are allowed enqueue and dequeue. 
+Enqueue means to insert an item into the back of the queue,
+dequeue means removing the front item. The picture demonstrates the FIFO access.
+
 C.  Write a class for an element of a doublely-linked list.
 
+
+
 D.  Explain what a Merkle Tree is.  
+
+A tree constructed by hashing paired data ,
+then pairing and hashing the results until a single hash remains, the merkle root. In Bitcoin,
+the leaves are almost always transactions from a single block.
+
     Describe the structure and purpose of a Merkle Tree.
+    
+    
+    
     What is the Merkle root?
+    
+    the Merkle root is the hash of all the hashes of all the transactions in the block. 
+    The Merkle root is included in the block header. With this scheme, 
+    it is possible to securely verify that a transaction has been accepted 
+    by the networkby downloading just the tiny block headers and Merkle tree --
+    downloading the entire block chain is unnecessary.
+    
     What is the function of a certificate in this data structure?
+    
+    
+    
     
